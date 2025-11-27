@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Квиз: Истраживање тржишта</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .question h3 {
+            margin-top: 0;
+            font-size: 1rem;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 18px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+        #submitBtn {
+            background: #2563eb;
+            color: #fff;
+        }
+        #resetBtn {
+            background: #9ca3af;
+            color: #fff;
+        }
+        #result {
+            margin-top: 16px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .correct {
+            border-left: 4px solid #16a34a;
+        }
+        .incorrect {
+            border-left: 4px solid #dc2626;
+        }
+    </style>
+</head>
+<body>
+    <h1>📝 Квиз: Истраживање тржишта</h1>
+    <p>Обележи тачне одговоре, а затим кликни на „Провери резултат“.</p>
+
+    <form id="quizForm">
+        <div class="question" data-q="q1">
+            <h3>1. Који је главни циљ истраживања тржишта?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="a"> Повећање производње</label>
+                <label><input type="radio" name="q1" value="b"> Прикупљање информација које помажу у доношењу пословних одлука</label>
+                <label><input type="radio" name="q1" value="c"> Повећање броја радника</label>
+                <label><input type="radio" name="q1" value="d"> Произвођење нових производа по сваку цену</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q2">
+            <h3>2. Шта су примарни подаци?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="a"> Подаци које истраживач прикупља први пут за конкретно истраживање</label>
+                <label><input type="radio" name="q2" value="b"> Подаци које су прикупљале државне институције</label>
+                <label><input type="radio" name="q2" value="c"> Подаци који се налазе у уџбеницима</label>
+                <label><input type="radio" name="q2" value="d"> Подаци који се користе у маркетиншким кампањама</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q3">
+            <h3>3. Која од наведених метода јесте метода прикупљања података?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="a"> Анкета</label>
+                <label><input type="radio" name="q3" value="b"> Презентација</label>
+                <label><input type="radio" name="q3" value="c"> Рачуноводствена анализа</label>
+                <label><input type="radio" name="q3" value="d"> Продаја</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q4">
+            <h3>4. Шта је узорак у истраживању?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="a"> Све јединице које проучавамо</label>
+                <label><input type="radio" name="q4" value="b"> Мањи број јединица који представља популацију</label>
+                <label><input type="radio" name="q4" value="c"> Група конкурената</label>
+                <label><input type="radio" name="q4" value="d"> Списак свих купаца</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q5">
+            <h3>5. Који од следећих корака долази први у процесу истраживања?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="a"> Дефинисање проблема и циљева</label>
+                <label><input type="radio" name="q5" value="b"> Обрада података</label>
+                <label><input type="radio" name="q5" value="c"> Прикупљање података</label>
+                <label><input type="radio" name="q5" value="d"> Писање извештаја</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q6">
+            <h3>6. Пример секундарног извора података је:</h3>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="a"> Анкета ученика</label>
+                <label><input type="radio" name="q6" value="b"> Интервју са купцем</label>
+                <label><input type="radio" name="q6" value="c"> Статистички извештај Републичког завода за статистику</label>
+                <label><input type="radio" name="q6" value="d"> Посматрање купаца у радњи</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q7">
+            <h3>7. Који субјект највише користи истраживање тржишта?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="a"> Само велике фирме</label>
+                <label><input type="radio" name="q7" value="b"> Само школе</label>
+                <label><input type="radio" name="q7" value="c"> Сва предузећа која желе боље пословне одлуке</label>
+                <label><input type="radio" name="q7" value="d"> Искључиво држава</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q8">
+            <h3>8. Шта је крајњи резултат истраживања тржишта?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="a"> Повећање цена</label>
+                <label><input type="radio" name="q8" value="b"> Развој рекламе</label>
+                <label><input type="radio" name="q8" value="c"> Запошљавање истраживача</label>
+                <label><input type="radio" name="q8" value="d"> Извештај са закључцима и препорукама</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q9">
+            <h3>9. У анкетном истраживању најважније је:</h3>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="a"> Да анкета има што више украса</label>
+                <label><input type="radio" name="q9" value="b"> Да питања буду јасна и прецизна</label>
+                <label><input type="radio" name="q9" value="c"> Да се питања понављају</label>
+                <label><input type="radio" name="q9" value="d"> Да се анкета попуњава што спорије</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q10">
+            <h3>10. Која фирма највероватније спроводи дигитално истраживање тржишта?</h3>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="a"> Фарма за тов свиња</label>
+                <label><input type="radio" name="q10" value="b"> Фризерски салон без интернета</label>
+                <label><input type="radio" name="q10" value="c"> Онлајн продавница спортске опреме</label>
+                <label><input type="radio" name="q10" value="d"> Сеоска библиотека</label>
+            </div>
+        </div>
+
+        <h2>Тачно / Нетачно</h2>
+
+        <div class="question" data-q="q11">
+            <h3>11. Истраживање тржишта увек даје 100% тачне резултате.</h3>
+            <div class="answers">
+                <label><input type="radio" name="q11" value="t"> Тачно</label>
+                <label><input type="radio" name="q11" value="f"> Нетачно</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q12">
+            <h3>12. Конкуренција је важан део истраживања тржишта.</h3>
+            <div class="answers">
+                <label><input type="radio" name="q12" value="t"> Тачно</label>
+                <label><input type="radio" name="q12" value="f"> Нетачно</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q13">
+            <h3>13. Ученици могу самостално да спроводе истраживање тржишта као школски пројекат.</h3>
+            <div class="answers">
+                <label><input type="radio" name="q13" value="t"> Тачно</label>
+                <label><input type="radio" name="q13" value="f"> Нетачно</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q14">
+            <h3>14. Обрада података долази после прикупљања података.</h3>
+            <div class="answers">
+                <label><input type="radio" name="q14" value="t"> Тачно</label>
+                <label><input type="radio" name="q14" value="f"> Нетачно</label>
+            </div>
+        </div>
+
+        <div class="question" data-q="q15">
+            <h3>15. Анкета и интервју су исто.</h3>
+            <div class="answers">
+                <label><input type="radio" name="q15" value="t"> Тачно</label>
+                <label><input type="radio" name="q15" value="f"> Нетачно</label>
+            </div>
+        </div>
+
+        <button type="button" id="submitBtn">✅ Провери резултат</button>
+        <button type="reset" id="resetBtn">🔁 Обриши одговоре</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'a',
+            q3: 'a',
+            q4: 'b',
+            q5: 'a',
+            q6: 'c',
+            q7: 'c',
+            q8: 'd',
+            q9: 'b',
+            q10: 'c',
+            q11: 'f',
+            q12: 't',
+            q13: 't',
+            q14: 't',
+            q15: 'f'
+        };
+
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            let score = 0;
+            let total = Object.keys(correctAnswers).length;
+
+            document.querySelectorAll('.question').forEach(q => {
+                q.classList.remove('correct', 'incorrect');
+                const qName = q.getAttribute('data-q');
+                const selected = document.querySelector('input[name="' + qName + '"]:checked');
+                if (selected) {
+                    if (selected.value === correctAnswers[qName]) {
+                        score++;
+                        q.classList.add('correct');
+                    } else {
+                        q.classList.add('incorrect');
+                    }
+                }
+            });
+
+            const result = document.getElementById('result');
+            result.textContent = 'Освојили сте ' + score + ' од ' + total + ' поена.';
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('correct', 'incorrect'));
+            document.getElementById('result').textContent = '';
+        });
+    </script>
+</body>
+</html>
